@@ -12,21 +12,21 @@ const (
 	CONTAINS                   = "contains"
 	STARTS_WITH                = "startsWith"
 	ENDS_WITH                  = "endsWith"
-	IS_EMPTY                   = "isEmpty"
-	IS_NOT_EMPTY               = "isNotEmpty"
-	IS_ANY_OF                  = "isAnyOf"
+	IS                         = "is"         // boolean is and date is
+	IS_EMPTY                   = "isEmpty"    // works for string, date, number
+	IS_NOT_EMPTY               = "isNotEmpty" // works for string, date, number
+	IS_ANY_OF                  = "isAnyOf"    // works for string, date, number
 	NUMBER_EQUALS              = "="
 	NUMBER_NOT_EQUALS          = "!="
 	NUMBER_GREATER_THAN        = ">"
 	NUMBER_GREATER_THAN_EQUALS = ">="
 	NUMBER_LESS_THAN           = "<"
 	NUMBER_LESS_THAN_EQUALS    = "<="
-	DATE_IS                    = "is"
-	DATE_IS_NOT                = "isNot"
-	DATE_IS_AFTER              = "isAfter"
-	DATE_IS_BEFORE             = "isBefore"
-	DATE_IS_ON_OR_AFTER        = "isOnOrAfter"
-	DATE_IS_ON_OR_BEFORE       = "isOnOrBefore"
+	DATE_IS_NOT                = "not"
+	DATE_IS_AFTER              = "after"
+	DATE_IS_ON_OR_AFTER        = "onOrAfter"
+	DATE_IS_BEFORE             = "before"
+	DATE_IS_ON_OR_BEFORE       = "onOrBefore"
 )
 
 var MapSqlOperators = map[string]string{
@@ -43,7 +43,7 @@ var MapSqlOperators = map[string]string{
 	NUMBER_GREATER_THAN_EQUALS: ">=",
 	NUMBER_LESS_THAN:           "<",
 	NUMBER_LESS_THAN_EQUALS:    "<=",
-	DATE_IS:                    "=",
+	IS:                         "=",
 	DATE_IS_NOT:                "!=",
 	DATE_IS_AFTER:              ">",
 	DATE_IS_BEFORE:             "<",
